@@ -4,7 +4,7 @@ Dart extensions for translating decimal numbers to Roman numerals and vice versa
 
 Negative numbers and numbers greater than 65535 are not supported. Functions will return null in place of generating nonsense,
 
-![Coverage](https://raw.githubusercontent.com/{you}/{repo}/master/coverage_badge.svg?sanitize=true)
+![Coverage](https://raw.githubusercontent.com/greymouser/dart-numerus/master/coverage_badge.svg?sanitize=true)
 
 ## Examples
 
