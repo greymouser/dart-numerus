@@ -1,3 +1,8 @@
 ## 1.0.0
 
-- Initial version, created by Stagehand
+- Numerus provides:
+  - int to Roman Numeral string
+  - Roman numeral String to int
+  - Test Roman numeral String for validity
+
+
