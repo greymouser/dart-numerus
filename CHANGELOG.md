@@ -1,3 +1,7 @@
+## 1.0.2
+
+ - Fix small analyzer warnings
+
 ## 1.0.1
 
  - Updated package description

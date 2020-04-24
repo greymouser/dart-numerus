@@ -28,7 +28,7 @@ extension RomanNumeralsInt on int {
 
     final nRevMap = _romanNumbersToLetters.keys.toList();
     nRevMap.sort((a, b) => b.compareTo(a));
-    var curString = "";
+    var curString = '';
     var accum = this;
     var nIndex = 0;
     while (accum > 0) {
