@@ -15,7 +15,9 @@ final _romanNumbersToLetters = {
 };
 
 extension RomanNumeralsInt on int {
-  String toRomanNumeralString() {
+  /// Uses [nulla] as placeholder for zero. [nulla] should be a single, Roman,
+  /// alphanumeric character.
+  String toRomanNumeralString({String nulla = 'N'}) {
     // self-imposed maxium value. We don't need >64k worth of M's.
     if (this < 0 || this > 65535) {
       return null;
@@ -23,7 +25,7 @@ extension RomanNumeralsInt on int {
 
     // Handle zero with a special case
     if (this == 0) {
-      return 'N';
+      return nulla.substring(0, 1).toUpperCase();
     }
 
     final nRevMap = _romanNumbersToLetters.keys.toList();

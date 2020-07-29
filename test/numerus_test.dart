@@ -8,6 +8,16 @@ void main() {
       expect(n.toRomanNumeralString(), 'N');
     });
 
+    test('number to zero; specify nulla', () {
+      var n = 0;
+      expect(n.toRomanNumeralString(nulla: '0'), '0');
+    });
+
+    test('number to zero; specify nulla - long string', () {
+      var n = 0;
+      expect(n.toRomanNumeralString(nulla: 'cat'), 'C');
+    });
+
     test('number to unit', () {
       var n = 90;
       expect(n.toRomanNumeralString(), 'XC');
