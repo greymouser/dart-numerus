@@ -1,4 +1,4 @@
-## 1.1.0
+## 1.1.0-nullsafety.1
 
  - Update for null-safety support.
 
