@@ -15,11 +15,15 @@ final _romanNumbersToLetters = {
 };
 
 extension RomanNumeralsInt on int {
+  /// Check for a valid Roman numeral value -- this is a sanity check, as we
+  /// don't want 64k worth of M's.
+  bool get isValidRomanNumeralValue => !(this < 0 || this > 65535);
+
   /// Uses [nulla] as placeholder for zero. [nulla] should be a single, Roman,
   /// alphanumeric character.
-  String toRomanNumeralString({String nulla = 'N'}) {
+  String? toRomanNumeralString({String nulla = 'N'}) {
     // self-imposed maxium value. We don't need >64k worth of M's.
-    if (this < 0 || this > 65535) {
+    if (!isValidRomanNumeralValue) {
       return null;
     }
 

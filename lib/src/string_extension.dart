@@ -29,7 +29,7 @@ extension RomanNumeralsString on String {
     return matches.length == 1;
   }
 
-  int toRomanNumeralValue() {
+  int? toRomanNumeralValue() {
     // Guard against malformed string sequences, and return early if the string itself is invalid
     if (!isValidRomanNumeral()) {
       return null;

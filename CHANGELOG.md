@@ -1,3 +1,7 @@
+## 1.1.0
+
+ - Update for null-safety support.
+
 ## 1.0.3
 
  - Allow user to specify placeholder character for nulla/zero.

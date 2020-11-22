@@ -26,9 +26,9 @@ void main() {
     test('number to max unsigned long', () {
       var n = 65535;
       var got = n.toRomanNumeralString();
-      expect(got.length, 70); // the length of the insanely long string
-      expect(got[0], 'M');
-      expect(got.endsWith('MDXXXV'), true);
+      expect(got?.length, 70); // the length of the insanely long string
+      expect(got?[0], 'M');
+      expect(got?.endsWith('MDXXXV'), true);
     });
 
     test('number to greater than max unsigned long', () {
