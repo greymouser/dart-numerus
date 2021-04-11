@@ -1,3 +1,8 @@
+## 1.1.1
+
+ - Full null-safety support.
+ - Cleaned up depcrecated dependencies.
+
 ## 1.1.0-nullsafety.1
 
  - Update for null-safety support.
