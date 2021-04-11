@@ -4,7 +4,7 @@ version: 1.1.1
 homepage: https://github.com/greymouser/dart-numerus
 
 environment:
-  sdk: '>=2.13.0-0 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'
 
 dev_dependencies:
   pedantic: ^1.11.0
