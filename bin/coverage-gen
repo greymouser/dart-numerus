@@ -1,5 +1,47 @@
 #!/usr/bin/env bash
 
-flutter test --coverage
+function justdie {
+    echo "$1"
+    exit 1
+}
+
+exists_in_path () {
+    case $(command -v -- "$1") in
+        /*) return 0;;
+        alias\ *) return 1;; # alias
+        *) return 1;; # built-in or function
+    esac
+}
+
+usage() { echo "Usage: $0 [-i] [-h]" 1>&2; exit 1; }
+
+opt_i=""
+while getopts "ih" o; do
+    case "${o}" in
+        i)
+            opt_i="yes"
+            ;;
+        h)
+            usage
+            ;;
+        *)
+            opt_i=""
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
+mkdir -p coverage
+dart test --coverage coverage || justdie "tests failed"
+dart pub global run coverage:format_coverage \
+    --lcov \
+    --in coverage/test \
+    --out coverage/lcov.info \
+    --packages=.packages \
+    --report-on=lib \
+    || justdie "report generation failed"
 genhtml -o coverage coverage/lcov.info
-open coverage/index.html
+
+if [ -n "$opt_i" ] && exists_in_path open; then
+    open coverage/index.html
+fi

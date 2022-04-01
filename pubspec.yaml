@@ -1,11 +1,14 @@
 name: numerus
-description: Dart extensions for translating integers to Roman numerals and Roman numerals strings to integers.
-version: 1.1.1
+description: Dart extensions for translating integers to Roman numerals and Roman numeral strings to integers.
+version: 2.0.0
 homepage: https://github.com/greymouser/dart-numerus
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.16.0 <3.0.0' # Dart version
+
+dependencies:
+  characters: ^1.2.0
 
 dev_dependencies:
-  pedantic: ^1.11.0
-  test: ^1.16.8
+  lints: ^1.0.1
+  test: ^1.20.1
