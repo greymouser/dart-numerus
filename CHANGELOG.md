@@ -1,8 +1,15 @@
+## 2.1.1
+ - Update CHANGLOG.md
+
+## 2.1.0
+ - Update for Dart 3.x
+ - Update tests & coverage
+
 ## 2.0.0
 
  - Support for Vinculum or Apostrophus (both compact with Unicode
    and tally marks)
-- **NOTE**: this change means the maximum value of common/default config is
+ - **NOTE**: this change means the maximum value of common/default config is
      3,999; 399,999 for 'compact' apostrophus', and 3,999,999 for both
      tally mark apostrophus and vinculum styles.
  - Housekeeping for bigger Dart update, as well as `test` and `analyze`
