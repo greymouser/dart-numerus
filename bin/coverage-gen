@@ -31,16 +31,11 @@ while getopts "ih" o; do
 done
 shift $((OPTIND-1))
 
+dart pub global activate coverage
+
 mkdir -p coverage
-dart test --coverage coverage || justdie "tests failed"
-dart pub global run coverage:format_coverage \
-    --lcov \
-    --in coverage/test \
-    --out coverage/lcov.info \
-    --packages=.packages \
-    --report-on=lib \
-    || justdie "report generation failed"
-genhtml -o coverage coverage/lcov.info
+dart pub global run coverage:test_with_coverage || justdie "tests failed"
+genhtml -o coverage coverage/lcov.info || justdie "genhtml failed"
 
 if [ -n "$opt_i" ] && exists_in_path open; then
     open coverage/index.html

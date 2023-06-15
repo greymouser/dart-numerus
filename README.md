@@ -67,6 +67,8 @@ void main() {
   print(n.toRomanNumeralString());
   // ↈↈↈↂↇↁↀↀCCCCXLIX
 
+  // NOTE: if you see missing characters in this example, then you'll need to
+  // install a font that supports them.
   str = 'ↈↈↈↂↇↁↀↀCCCCXLIX';
   print(str.isValidRomanNumeralValue());
   // true

@@ -54,10 +54,9 @@ void main() {
 
       test('all', () {
         for (var n = 1; n < 4000; n += 1) {
-          print(n);
           expect(n.toRomanNumeralString() != null, true);
         }
-      }, skip: 'Do not run every time.');
+      }, tags: 'prerelease');
     });
 
     group('String to int', () {

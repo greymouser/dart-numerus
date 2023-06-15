@@ -94,7 +94,7 @@ void main() {
         for (var n = 1; n < 400000; n += 1) {
           expect(n.toRomanNumeralString() != null, true);
         }
-      }, skip: 'Do not run every time.');
+      }, tags: 'prerelease');
     });
 
     group('String to int', () {
