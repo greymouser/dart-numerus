@@ -1,3 +1,6 @@
+## 2.1.2
+ - Fix minor static analysis fixes
+
 ## 2.1.1
  - Update CHANGLOG.md
 

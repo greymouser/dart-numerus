@@ -136,17 +136,17 @@ extension RomanNumeralsString on String {
         final aConfig = config as ApostrophusRomanNumeralsConfig;
         if (aConfig.compact) {
           expString = r'((ↈ){0,3})'
-                  r'((ↂↈ)|(ↂↇ)|(ↇ)?(ↂ){0,3})'
-                  r'((ↀↂ)|(ↀↁ)|(ↁ)?(ↀ){0,3})'
-                  r'((Cↀ)|(CCCC)|(D)?C{0,3})' +
-              expString;
+              r'((ↂↈ)|(ↂↇ)|(ↇ)?(ↂ){0,3})'
+              r'((ↀↂ)|(ↀↁ)|(ↁ)?(ↀ){0,3})'
+              r'((Cↀ)|(CCCC)|(D)?C{0,3})'
+              '$expString';
         } else {
           expString = r'((CCCCIↃↃↃↃ){0,3})'
-                  r'((CCCIↃↃↃCCCCIↃↃↃↃ)|(CCCIↃↃↃIↃↃↃↃ)|(IↃↃↃↃ)?(CCCIↃↃↃ){0,3})'
-                  r'((CCIↃↃCCCIↃↃↃ)|(CCIↃↃIↃↃↃ)|(IↃↃↃ)?(CCIↃↃ){0,3})'
-                  r'((CIↃCCIↃↃ)|(CIↃIↃↃ)|(ⅠↃↃ)?(CIↃ){0,3})'
-                  r'((CCIↃ)|(CCCC)|(IↃ)?C{0,3})' +
-              expString;
+              r'((CCCIↃↃↃCCCCIↃↃↃↃ)|(CCCIↃↃↃIↃↃↃↃ)|(IↃↃↃↃ)?(CCCIↃↃↃ){0,3})'
+              r'((CCIↃↃCCCIↃↃↃ)|(CCIↃↃIↃↃↃ)|(IↃↃↃ)?(CCIↃↃ){0,3})'
+              r'((CIↃCCIↃↃ)|(CIↃIↃↃ)|(ⅠↃↃ)?(CIↃ){0,3})'
+              r'((CCIↃ)|(CCCC)|(IↃ)?C{0,3})'
+              '$expString';
         }
         break;
       case RomanNumeralsType.vinculum:
@@ -157,11 +157,11 @@ extension RomanNumeralsString on String {
         // > restricted, but some pattern features, like Unicode property
         // > escapes, are only available in this mode.
         expString = r'((M\u{0305}){0,3})'
-                r'((C\u{0305}M\u{0305})|(C\u{0305}D\u{0305})|(D\u{0305})?(C\u{0305}){0,3})'
-                r'((X\u{0305}C\u{0305})|(X\u{0305}L\u{0305})|(L\u{0305})?(X\u{0305}){0,3})'
-                r'((MX\u{0305})|(MV\u{0305})|(V\u{0305})?(M){0,3})'
-                r'(CM|CD|D?C{0,3})' +
-            expString;
+            r'((C\u{0305}M\u{0305})|(C\u{0305}D\u{0305})|(D\u{0305})?(C\u{0305}){0,3})'
+            r'((X\u{0305}C\u{0305})|(X\u{0305}L\u{0305})|(L\u{0305})?(X\u{0305}){0,3})'
+            r'((MX\u{0305})|(MV\u{0305})|(V\u{0305})?(M){0,3})'
+            r'(CM|CD|D?C{0,3})'
+            '$expString';
         break;
     }
     expString = r'^' + expString + r'$';
