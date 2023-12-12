@@ -1,3 +1,6 @@
+## 2.2.0
+ - Bump to support Dart upgrade and dependency update.
+
 ## 2.1.2
  - Fix minor static analysis fixes
 
