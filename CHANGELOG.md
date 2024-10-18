@@ -1,3 +1,6 @@
+## 2.3.0
+ - Bump to support Dart version upgrade and dependency updates.
+
 ## 2.2.0
  - Bump to support Dart upgrade and dependency update.
 

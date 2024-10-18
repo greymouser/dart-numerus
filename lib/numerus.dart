@@ -1,3 +1,3 @@
-library numerus;
+library;
 
 export 'roman/roman.dart';

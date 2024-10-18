@@ -25,8 +25,8 @@ class RomanNumeralsConfig {
 class ApostrophusRomanNumeralsConfig extends RomanNumeralsConfig {
   final bool compact;
 
-  const ApostrophusRomanNumeralsConfig({this.compact = false, String? nulla})
-      : super(configType: RomanNumeralsType.apostrophus, nulla: nulla);
+  const ApostrophusRomanNumeralsConfig({this.compact = false, super.nulla})
+      : super(configType: RomanNumeralsType.apostrophus);
 }
 
 /// The [CompactApostrophusRomanNumeralsConfig] form of
@@ -36,8 +36,8 @@ class ApostrophusRomanNumeralsConfig extends RomanNumeralsConfig {
 /// Maximum value: 399,999.
 class CompactApostrophusRomanNumeralsConfig
     extends ApostrophusRomanNumeralsConfig {
-  const CompactApostrophusRomanNumeralsConfig({String? nulla})
-      : super(compact: true, nulla: nulla);
+  const CompactApostrophusRomanNumeralsConfig({super.nulla})
+      : super(compact: true);
 }
 
 /// Use [CommonRomanNumeralsConfig] for the common MDCLXVI style.
@@ -45,8 +45,8 @@ class CompactApostrophusRomanNumeralsConfig
 ///
 /// [CommonRomanNumeralsConfig] is the default configuration.
 class CommonRomanNumeralsConfig extends RomanNumeralsConfig {
-  const CommonRomanNumeralsConfig({String? nulla})
-      : super(configType: RomanNumeralsType.common, nulla: nulla);
+  const CommonRomanNumeralsConfig({super.nulla})
+      : super(configType: RomanNumeralsType.common);
 }
 
 /// Use [VinculumRomanNumeralsConfig] for the extended style similar
@@ -58,6 +58,6 @@ class CommonRomanNumeralsConfig extends RomanNumeralsConfig {
 /// is reused with a line overtop multipling each by 1,000. These are
 /// V̅, X̅, L̅, C̅, D̅, and M̅. I̅ is not used, but M is preffered for 1,000.
 class VinculumRomanNumeralsConfig extends RomanNumeralsConfig {
-  const VinculumRomanNumeralsConfig({String? nulla})
-      : super(configType: RomanNumeralsType.vinculum, nulla: nulla);
+  const VinculumRomanNumeralsConfig({super.nulla})
+      : super(configType: RomanNumeralsType.vinculum);
 }
